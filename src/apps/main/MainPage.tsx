@@ -51,7 +51,7 @@ const MainPage = () => {
 
       <footer>
         <Text fontSize="sm" color="#222222" mt="10">
-          team Toppings 2023
+          team <strong>Toppings</strong> 2023
         </Text>
       </footer>
 
