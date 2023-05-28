@@ -1,5 +1,5 @@
 import { GlobalCSS } from "@/styles";
-
+import { hotjar } from "react-hotjar";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 
 import {
@@ -12,6 +12,7 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { Analytics } from "@vercel/analytics/react";
 import type { AppProps } from "next/app";
 import { Inter } from "next/font/google";
+import { useEffect } from "react";
 
 const client = new QueryClient();
 
@@ -36,6 +37,11 @@ const App = ({
   Component,
   pageProps,
 }: AppProps<{ dehydratedState: DehydratedState }>) => {
+  useEffect(() => {
+    if (process.env.NODE_ENV !== "development") {
+      hotjar.initialize(3510722, 6);
+    }
+  }, []);
   return (
     <QueryClientProvider client={client}>
       <Hydrate state={pageProps.dehydratedState}>

@@ -24,6 +24,7 @@ specifiers:
   react: 18.2.0
   react-dom: 18.2.0
   react-hook-form: ^7.43.9
+  react-hotjar: ^6.1.0
   react-loader-spinner: ^5.3.4
   react-wrap-balancer: ^0.5.0
   typescript: 5.0.4
@@ -49,6 +50,7 @@ dependencies:
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-hook-form: 7.44.1_react@18.2.0
+  react-hotjar: 6.1.0
   react-loader-spinner: 5.3.4_biqbaboplfbrettd7655fr4n2y
   react-wrap-balancer: 0.5.0_react@18.2.0
   typescript: 5.0.4
@@ -3806,6 +3808,10 @@ packages:
       react: ^16.8.0 || ^17 || ^18
     dependencies:
       react: 18.2.0
+    dev: false
+
+  /react-hotjar/6.1.0:
+    resolution: {integrity: sha512-V1UJixDMspAIrbGIFG282U7mH2aK1JBid0YR8F9oscb6lTkjMga+gst2gesxJDsqsax+k+lM1LqRXYzmUu8izA==}
     dev: false
 
   /react-is/16.13.1:
