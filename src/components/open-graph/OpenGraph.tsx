@@ -1,5 +1,5 @@
 import Head from "next/head";
-import ogLogo from "../../../../public/logo.png";
+import ogLogo from "../../../public/logo.png";
 
 interface Props {
   title: string;
