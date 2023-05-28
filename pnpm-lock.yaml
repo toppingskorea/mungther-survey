@@ -25,6 +25,7 @@ specifiers:
   react-dom: 18.2.0
   react-hook-form: ^7.43.9
   react-loader-spinner: ^5.3.4
+  react-wrap-balancer: ^0.5.0
   typescript: 5.0.4
   zustand: ^4.3.7
 
@@ -49,6 +50,7 @@ dependencies:
   react-dom: 18.2.0_react@18.2.0
   react-hook-form: 7.44.1_react@18.2.0
   react-loader-spinner: 5.3.4_biqbaboplfbrettd7655fr4n2y
+  react-wrap-balancer: 0.5.0_react@18.2.0
   typescript: 5.0.4
   zustand: 4.3.8_immer@10.0.2+react@18.2.0
 
@@ -3877,6 +3879,14 @@ packages:
       invariant: 2.2.4
       react: 18.2.0
       tslib: 2.5.2
+    dev: false
+
+  /react-wrap-balancer/0.5.0_react@18.2.0:
+    resolution: {integrity: sha512-5vwe5QDczQ9zwAtv3iEVj8hdMbNwQtM/QlSNLJfDUzRE9noPtxevb+Kon916Mu2RUorCrAtashQ1F9BVBjdeZg==}
+    peerDependencies:
+      react: '>=16.8.0 || ^17.0.0 || ^18'
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /react/18.2.0:

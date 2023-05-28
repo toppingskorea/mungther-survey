@@ -16,7 +16,7 @@ export const useSubmitMutation = () => {
         status: "success",
         duration: 2000,
         containerStyle: {
-          width: "100vw",
+          width: "96vw",
         },
         isClosable: true,
       });

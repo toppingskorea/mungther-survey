@@ -1,3 +1,5 @@
+import axios from "axios";
+
 export const makeSubmit = async ({
   email,
   agreement,
@@ -5,7 +7,10 @@ export const makeSubmit = async ({
   email: string;
   agreement: "Y" | "N";
 }) => {
-  //   await axios.post("/");
+  await axios.post("/new", {
+    email,
+    agreement,
+  });
 
   return true;
 };

@@ -48,7 +48,7 @@ export const SubmitModal = () => {
             onClick={handleSubmitButtonClick}
             isLoading={makeSubmitButtonClickIsLoading}
           >
-            친구 만들어 주기
+            멍더 출시 알림받기🐶
           </Button>
           <Button onClick={onClose}>취소</Button>
         </ModalFooter>
