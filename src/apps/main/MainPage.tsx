@@ -18,7 +18,7 @@ import { Balancer } from "react-wrap-balancer";
 import OpenGraph from "@/components/open-graph/OpenGraph";
 
 const MainPage = () => {
-  const { show, share } = useCTAButton();
+  const { handleCreateFriendButtonClick, share } = useCTAButton();
 
   return (
     <VStack backgroundColor="#FFFFF0" pt="20">
@@ -45,7 +45,7 @@ const MainPage = () => {
         </Text>
       </Balancer>
       <ButtonGroup pt="6">
-        <Button onClick={show} colorScheme="orange">
+        <Button onClick={handleCreateFriendButtonClick} colorScheme="orange">
           친구 만들어 주기
         </Button>
         <Button onClick={share}>공유하기</Button>
