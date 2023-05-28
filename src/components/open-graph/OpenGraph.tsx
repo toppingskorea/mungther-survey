@@ -23,7 +23,7 @@ const OpenGraph = ({
   description = "우리 강아지의 산책 친구를 찾아봐요",
   imageUrl,
 }: Props) => {
-  const computedTitle = `kimeru | ${title}`;
+  const computedTitle = `${title}`;
   const computedImageUrl = imageUrl ?? ogLogo.src;
 
   return (
