@@ -15,12 +15,14 @@ import { useCTAButton } from "./MainPage.hooks";
 import { SubmitModal } from "./components/modals";
 import Image from "next/image";
 import { Balancer } from "react-wrap-balancer";
+import OpenGraph from "@/components/open-graph/OpenGraph";
 
 const MainPage = () => {
   const { show, share } = useCTAButton();
 
   return (
     <VStack backgroundColor="#FFFFF0" pt="20">
+      <OpenGraph title="멍더" />
       <ImageWrapper>
         <Image src={dog.src} width={500} height={500} alt="" />
       </ImageWrapper>
