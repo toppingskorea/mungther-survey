@@ -38,7 +38,7 @@ export const SubmitModal = () => {
   const handleCancelButtonClick = useCallback(() => {
     onClose();
     sendClickEventToGoogleAnalytics({
-      eventName: "modal_submit_button_click",
+      eventName: "modal_cancel_button_click",
     });
   }, [onClose, sendClickEventToGoogleAnalytics]);
   return (
