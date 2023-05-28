@@ -45,7 +45,9 @@ const MainPage = () => {
         </Text>
       </Balancer>
       <ButtonGroup pt="6">
-        <Button onClick={show}>친구 만들어 주기</Button>
+        <Button onClick={show} colorScheme="orange">
+          친구 만들어 주기
+        </Button>
         <Button onClick={share}>공유하기</Button>
       </ButtonGroup>
 
