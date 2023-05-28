@@ -38,7 +38,7 @@ export const SubmitModal = () => {
           <Balancer>
             <Text fontSize="md" color="#222222">
               <strong>&apos;멍더&apos;</strong>가 세상 밖으로 나오기 얼마 남지
-              않았어요! 출시되면 제일 먼저 알려드리려고 해요!
+              않았어요! 출시되면 제일 먼저 알려드리려고 해요.
             </Text>
           </Balancer>
           <FormLabel mt="6">이메일</FormLabel>

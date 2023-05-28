@@ -40,7 +40,7 @@ const MainPage = () => {
             query="100명"
             styles={{ px: "2", py: "1", rounded: "full", bg: "red.100" }}
           >
-            현재 100명의 친구들이 기다리고 있어요!
+            현재 100명의 친구들이 기다리고 있어요.
           </Highlight>
         </Text>
       </Balancer>
