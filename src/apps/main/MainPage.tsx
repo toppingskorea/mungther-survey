@@ -1,6 +1,9 @@
 import { Button, Container, Heading, Input, VStack } from "@chakra-ui/react";
+import { useCTAButton } from "./MainPage.hooks";
 
 const MainPage = () => {
+  const { onShareLink } = useCTAButton();
+
   return (
     <Container>
       <VStack>
@@ -12,7 +15,7 @@ const MainPage = () => {
         <Input placeholder="emaa@gmail.com" />
       </VStack>
 
-      <Button>공유하기</Button>
+      <Button onClick={onShareLink}>공유하기</Button>
     </Container>
   );
 };
