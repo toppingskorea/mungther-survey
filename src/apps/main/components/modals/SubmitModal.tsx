@@ -9,9 +9,11 @@ import {
   ModalFooter,
   ModalHeader,
   ModalOverlay,
+  Text,
 } from "@chakra-ui/react";
 import { useSubmitModalStore } from "../../stores/submitModal.store";
 import { useInput, useSubmitAction } from "./SubmitModal.hooks";
+import { Balancer } from "react-wrap-balancer";
 
 export const SubmitModal = () => {
   const [isOpen, onClose] = useSubmitModalStore((state) => [
@@ -33,7 +35,13 @@ export const SubmitModal = () => {
         <ModalHeader>신청</ModalHeader>
         <ModalCloseButton />
         <ModalBody pb={6}>
-          <FormLabel>이메일</FormLabel>
+          <Balancer>
+            <Text fontSize="md" color="#222222">
+              <strong>&apos;멍더&apos;</strong>가 세상 밖으로 나오기 얼마 남지
+              않았어요! 출시되면 제일 먼저 알려드리려고 해요!
+            </Text>
+          </Balancer>
+          <FormLabel mt="6">이메일</FormLabel>
           <Input
             placeholder="연락받으실 메일을 작성해주세요."
             value={email}
