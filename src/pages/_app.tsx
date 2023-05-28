@@ -1,7 +1,5 @@
 import { GlobalCSS } from "@/styles";
-import { hotjar } from "react-hotjar";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
-
 import {
   Hydrate,
   QueryClient,
@@ -38,9 +36,9 @@ const App = ({
   pageProps,
 }: AppProps<{ dehydratedState: DehydratedState }>) => {
   useEffect(() => {
-    if (process.env.NODE_ENV !== "development") {
-      hotjar.initialize(3510722, 6);
-    }
+    import("react-hotjar").then((hotjarLib) => {
+      hotjarLib.hotjar.initialize(3510722, 6);
+    });
   }, []);
   return (
     <QueryClientProvider client={client}>
