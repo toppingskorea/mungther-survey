@@ -1,5 +1,6 @@
 import { GlobalCSS } from "@/styles";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+import GA from "react-ga4";
 import {
   Hydrate,
   QueryClient,
@@ -40,6 +41,8 @@ const App = ({
       hotjarLib.hotjar.initialize(3510722, 6);
     });
   }, []);
+
+  useEffect(() => GA.initialize([{ trackingId: "G-PX627SEBHW" }]), []);
   return (
     <QueryClientProvider client={client}>
       <Hydrate state={pageProps.dehydratedState}>
