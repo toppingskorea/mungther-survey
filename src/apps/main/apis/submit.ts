@@ -7,7 +7,7 @@ export const makeSubmit = async ({
   email: string;
   agreement: "Y" | "N";
 }) => {
-  await axios.post("/new", {
+  await axios.post("/api/new", {
     email,
     agreement,
   });

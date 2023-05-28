@@ -3,6 +3,7 @@ import { useMutation } from "@tanstack/react-query";
 import { useSubmitModalStore } from "../stores/submitModal.store";
 import { makeSubmit } from "../apis/submit";
 import { useGoogleAnalytics } from "@/hooks";
+import { alreadySubmit } from "../components/modals/SubmitModal.hooks";
 
 export const useSubmitMutation = () => {
   const toast = useToast();
@@ -25,6 +26,7 @@ export const useSubmitMutation = () => {
         },
         isClosable: true,
       });
+      alreadySubmit.set(true);
     },
   });
 };

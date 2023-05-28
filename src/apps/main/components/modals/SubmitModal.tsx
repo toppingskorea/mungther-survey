@@ -1,7 +1,7 @@
+import { useGoogleAnalytics } from "@/hooks";
 import {
   Button,
   Checkbox,
-  FormLabel,
   Input,
   Modal,
   ModalBody,
@@ -13,11 +13,10 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
+import { useCallback } from "react";
+import { Balancer } from "react-wrap-balancer";
 import { useSubmitModalStore } from "../../stores/submitModal.store";
 import { useInput, useSubmitAction } from "./SubmitModal.hooks";
-import { Balancer } from "react-wrap-balancer";
-import { useCallback } from "react";
-import { useGoogleAnalytics } from "@/hooks";
 
 export const SubmitModal = () => {
   const { sendClickEventToGoogleAnalytics } = useGoogleAnalytics();

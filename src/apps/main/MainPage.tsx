@@ -1,21 +1,14 @@
 import { dog } from "@/apps/main/assets/images";
-import {
-  Button,
-  ButtonGroup,
-  Divider,
-  Heading,
-  Highlight,
-  Input,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
+import OpenGraph from "@/components/open-graph/OpenGraph";
+import { Button, ButtonGroup, Skeleton, Text, VStack } from "@chakra-ui/react";
 import styled from "@emotion/styled";
+import { Suspense } from "@suspensive/react";
 import Lottie from "lottie-react";
-import { useCTAButton } from "./MainPage.hooks";
-import { SubmitModal } from "./components/modals";
 import Image from "next/image";
 import { Balancer } from "react-wrap-balancer";
-import OpenGraph from "@/components/open-graph/OpenGraph";
+import { useCTAButton } from "./MainPage.hooks";
+import { SubmitModal } from "./components/modals";
+import { CountSection } from "./components/sections/CountSection";
 
 const MainPage = () => {
   const { handleCreateFriendButtonClick, share } = useCTAButton();
@@ -34,16 +27,9 @@ const MainPage = () => {
         </Text>
       </Balancer>
 
-      <Balancer>
-        <Text color="#222222" fontSize="2xl" textAlign="center" mt="6">
-          <Highlight
-            query="100명"
-            styles={{ px: "2", py: "1", rounded: "full", bg: "red.100" }}
-          >
-            현재 100명의 친구들이 기다리고 있어요.
-          </Highlight>
-        </Text>
-      </Balancer>
+      <Suspense.CSROnly fallback={<Skeleton width="500px" height="30px" />}>
+        <CountSection />
+      </Suspense.CSROnly>
       <ButtonGroup pt="6">
         <Button onClick={handleCreateFriendButtonClick} colorScheme="orange">
           친구 만들어 주기

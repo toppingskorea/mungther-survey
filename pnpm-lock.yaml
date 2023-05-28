@@ -9,6 +9,7 @@ specifiers:
   '@suspensive/react-query': 1.9.4
   '@tanstack/react-query': ^4.29.5
   '@tanstack/react-query-devtools': ^4.29.6
+  '@toss/storage': ^1.2.0
   '@types/node': 18.16.2
   '@types/react': 18.2.0
   '@types/react-dom': 18.2.1
@@ -39,6 +40,7 @@ dependencies:
   '@suspensive/react': 1.9.4_react@18.2.0
   '@suspensive/react-query': 1.9.4_qyno3lhq2zue3dv7dcger6xzvu
   '@tanstack/react-query': 4.29.11_biqbaboplfbrettd7655fr4n2y
+  '@toss/storage': 1.2.0
   '@vercel/analytics': 1.0.1
   axios: 1.4.0
   copy-to-clipboard: 3.3.3
@@ -1718,6 +1720,12 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       use-sync-external-store: 1.2.0_react@18.2.0
+
+  /@toss/storage/1.2.0:
+    resolution: {integrity: sha512-pQ5nwy7mXeip47JhzDZ6RAOxoBtUkY1iF8oGd0LDoyZeTMk5IPEladq7VKEzIzh6AWvy1n1hckcqcaW30QKqXA==}
+    dependencies:
+      '@babel/runtime': 7.22.3
+    dev: false
 
   /@types/json5/0.0.29:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
