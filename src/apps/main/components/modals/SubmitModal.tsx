@@ -86,7 +86,7 @@ export const SubmitModal = () => {
           >
             {getNotice ? "멍더 출시 알림받기🐶" : "멍더 오픈 해주세요🐶"}
           </Button>
-          <Button onClick={onClose}>취소</Button>
+          <Button onClick={handleCancelButtonClick}>취소</Button>
         </ModalFooter>
       </ModalContent>
     </Modal>
