@@ -1,5 +1,5 @@
-import { useShareLink } from "@/hooks";
-import GA from "react-ga4";
+import { useGoogleAnalytics, useShareLink } from "@/hooks";
+
 import { useSubmitModal } from "./components/modals/SubmitModal.hooks";
 
 export const useCTAButton = () => {
@@ -14,10 +14,11 @@ export const useCTAButton = () => {
 
 const useCreateFriendButton = () => {
   const { show } = useSubmitModal();
+  const { sendClickEventToGoogleAnalytics } = useGoogleAnalytics();
 
   const handleCreateFriendButtonClick = () => {
     show();
-    GA.ga?.("send", "event", "click_event", "create_ friend_open_modal");
+    sendClickEventToGoogleAnalytics({ eventName: "create_friend_open_modal" });
   };
 
   return {

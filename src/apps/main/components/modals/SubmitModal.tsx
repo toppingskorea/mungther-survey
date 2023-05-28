@@ -16,8 +16,11 @@ import {
 import { useSubmitModalStore } from "../../stores/submitModal.store";
 import { useInput, useSubmitAction } from "./SubmitModal.hooks";
 import { Balancer } from "react-wrap-balancer";
+import { useCallback } from "react";
+import { useGoogleAnalytics } from "@/hooks";
 
 export const SubmitModal = () => {
+  const { sendClickEventToGoogleAnalytics } = useGoogleAnalytics();
   const [isOpen, onClose] = useSubmitModalStore((state) => [
     state.isOpen,
     state.onClose,
@@ -32,6 +35,12 @@ export const SubmitModal = () => {
       getNotice,
     });
 
+  const handleCancelButtonClick = useCallback(() => {
+    onClose();
+    sendClickEventToGoogleAnalytics({
+      eventName: "modal_submit_button_click",
+    });
+  }, [onClose, sendClickEventToGoogleAnalytics]);
   return (
     <Modal isOpen={isOpen} onClose={onClose} size="4xl">
       <ModalOverlay />
