@@ -27,7 +27,7 @@ const MainPage = () => {
         <Image src={dog.src} width={500} height={500} alt="" />
       </ImageWrapper>
       <Balancer>
-        <Text color="#222222" fontSize="3xl" textAlign="center">
+        <Text color="#222222" fontSize="2xl" textAlign="center">
           <strong>&apos;멍더&apos;</strong>&nbsp;앱을 통해서
           <br />
           우리 강아지에게 산책 친구를 만들어 주세요!
@@ -35,7 +35,7 @@ const MainPage = () => {
       </Balancer>
 
       <Balancer>
-        <Text color="#222222" fontSize="3xl" textAlign="center" mt="6">
+        <Text color="#222222" fontSize="2xl" textAlign="center" mt="6">
           <Highlight
             query="100명"
             styles={{ px: "2", py: "1", rounded: "full", bg: "red.100" }}
