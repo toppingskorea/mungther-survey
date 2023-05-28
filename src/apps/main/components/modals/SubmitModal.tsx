@@ -60,6 +60,7 @@ export const SubmitModal = () => {
           </VStack>
           {getNotice ? (
             <Input
+              mt="2"
               placeholder="연락받으실 메일을 작성해주세요."
               value={email}
               onChange={handleEmailChange}
