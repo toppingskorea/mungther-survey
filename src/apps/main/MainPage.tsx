@@ -2,6 +2,7 @@ import {
   Button,
   Container,
   Heading,
+  Highlight,
   Input,
   Text,
   VStack,
@@ -17,7 +18,12 @@ const MainPage = () => {
         우리 강아지에게 <strong>산책 친구</strong>를 만들어 주세요!
       </Text>
       <Text color="#222222" fontSize="3xl">
-        현재 <strong>100명</strong>의 친구들이 기다리고있어요!
+        <Highlight
+          query="100명"
+          styles={{ px: "2", py: "1", rounded: "full", bg: "red.100" }}
+        >
+          현재 100명의 친구들이 기다리고있어요!
+        </Highlight>
       </Text>
 
       <VStack>
