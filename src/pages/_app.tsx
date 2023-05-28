@@ -18,6 +18,14 @@ const client = new QueryClient();
 const inter = Inter({ subsets: ["latin"] });
 
 const theme = extendTheme({
+  styles: {
+    global: {
+      html: {
+        backgroundColor: "#FFFFF0",
+      },
+    },
+  },
+
   fonts: {
     body: inter.style.fontFamily,
     heading: inter.style.fontFamily,
