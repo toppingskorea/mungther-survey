@@ -19,8 +19,15 @@ export const useSubmitModal = () => {
 };
 
 export const useInput = () => {
+  const isOpen = useSubmitModalStore((state) => state.isOpen);
   const [email, setEmail] = useState<string>("");
   const [getNotice, setGetNotice] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      setEmail("");
+    }
+  }, [isOpen]);
 
   const handleEmailChange: ChangeEventHandler<HTMLInputElement> = (e) => {
     setEmail(e.currentTarget.value);
