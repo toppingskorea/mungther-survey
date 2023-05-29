@@ -27,7 +27,7 @@ const MainPage = () => {
         </Text>
       </Balancer>
 
-      <Suspense.CSROnly fallback={<Skeleton width="500px" height="30px" />}>
+      <Suspense.CSROnly fallback={<Skeleton width="300px" height="30px" />}>
         <CountSection />
       </Suspense.CSROnly>
       <ButtonGroup pt="6">

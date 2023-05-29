@@ -4,6 +4,7 @@ import { useSubmitMutation } from "../../mutations/useSubmitMutation";
 import { useToast } from "@chakra-ui/react";
 //@ts-ignore
 import { TypedStorage } from "@toss/storage/typed";
+import { useIncreaseCount } from "../../mutations/useIncreaseCount";
 
 export const useSubmitModal = () => {
   const onOpen = useSubmitModalStore((state) => state.onOpen);
@@ -51,8 +52,10 @@ export const useSubmitAction = ({
   getNotice,
 }: UseSubmitActionParams) => {
   const toast = useToast();
-  const { mutate, isLoading: makeSubmitButtonClickIsLoading } =
+  const { mutate: submitMutate, isLoading: submitIsLoading } =
     useSubmitMutation();
+  const { mutate: increaseCountMutate, isLoading: increaseCountIsLoading } =
+    useIncreaseCount();
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
 
@@ -82,15 +85,18 @@ export const useSubmitAction = ({
 
       return;
     }
-
-    mutate({
-      email,
-      agreement: "Y",
-    });
-  }, [alreadySubmit, email, getNotice, mutate, toast]);
+    if (getNotice) {
+      submitMutate({
+        email,
+        agreement: "Y",
+      });
+    } else {
+      increaseCountMutate();
+    }
+  }, [email, getNotice, increaseCountMutate, submitMutate, toast]);
 
   return {
-    makeSubmitButtonClickIsLoading,
+    makeSubmitButtonClickIsLoading: submitIsLoading || increaseCountIsLoading,
     handleSubmitButtonClick,
   };
 };

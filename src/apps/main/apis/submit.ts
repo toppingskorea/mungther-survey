@@ -7,10 +7,12 @@ export const makeSubmit = async ({
   email: string;
   agreement: "Y" | "N";
 }) => {
-  await axios.post("/api/new", {
+  const result = await axios.post("/api/new", {
     email,
     agreement,
   });
+
+  console.log(result);
 
   return true;
 };
