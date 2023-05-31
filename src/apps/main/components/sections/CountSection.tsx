@@ -8,7 +8,7 @@ export const CountSection = () => {
 
   return (
     <Balancer>
-      <Text color="#222222" fontSize="2xl" textAlign="center" mt="6">
+      <Text color="#222222" fontSize="2xl" textAlign="center">
         <Highlight
           query={`${userCount}명`}
           styles={{ px: "2", py: "1", rounded: "full", bg: "red.100" }}

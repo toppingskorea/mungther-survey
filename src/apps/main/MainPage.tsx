@@ -14,18 +14,11 @@ const MainPage = () => {
   const { handleCreateFriendButtonClick, share } = useCTAButton();
 
   return (
-    <VStack backgroundColor="#FFFFF0" pt="20">
+    <VStack backgroundColor="#FFFFF0">
       <OpenGraph title="멍더" />
       <ImageWrapper>
-        <Image src={dog.src} width={500} height={500} alt="" />
+        <Image src={dog.src} width={400} height={710} alt="" />
       </ImageWrapper>
-      <Balancer>
-        <Text color="#222222" fontSize="2xl" textAlign="center">
-          <strong>&apos;멍더&apos;</strong>&nbsp;앱을 통해서
-          <br />
-          우리 강아지에게 산책 친구를 만들어 주세요!
-        </Text>
-      </Balancer>
 
       <Suspense.CSROnly fallback={<Skeleton width="300px" height="30px" />}>
         <CountSection />
