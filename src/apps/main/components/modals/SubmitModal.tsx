@@ -50,8 +50,8 @@ export const SubmitModal = () => {
           <VStack align="flex-start">
             <Balancer>
               <Text fontSize="md" color="#222222">
-                <strong>&apos;멍더&apos;</strong>가 세상 밖으로 나오기까지 얼마
-                남지 않았어요!
+                <strong>&apos;멍더&apos;</strong>모바일 앱이 세상 밖으로
+                나오기까지 얼마 남지 않았어요!
                 <br /> 출시되면 제일 먼저 알려드리려고 해요.
               </Text>
             </Balancer>
@@ -83,7 +83,7 @@ export const SubmitModal = () => {
             onClick={handleSubmitButtonClick}
             isLoading={makeSubmitButtonClickIsLoading}
           >
-            {getNotice ? "멍더 출시 알림받기🐶" : "멍더 오픈 해주세요🐶"}
+            {getNotice ? "멍더 출시 알림받기🐶" : "멍더 출시 기대돼요.🐶"}
           </Button>
           <Button onClick={handleCancelButtonClick}>취소</Button>
         </ModalFooter>
